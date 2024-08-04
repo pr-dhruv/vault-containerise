@@ -1,0 +1,13 @@
+openssl_conf = openssl_def
+
+[openssl_def]
+engines = engine_section
+
+[engine_section]
+fips = fips_section
+
+[fips_section]
+engine_id = 1
+dynamic_path = /usr/lib/engines/libfips.so
+dynamic_algorithms = ALL
+init = 1
